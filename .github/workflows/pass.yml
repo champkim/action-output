@@ -1,0 +1,16 @@
+name: pass-using
+
+on: [push]
+
+jobs:  
+  build:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Print Password
+        env:
+          MY_PASS: ${{ secrets.PASS_ONTUNE }}
+        run: echo My password is $MY_PASS
+            
